@@ -116,7 +116,7 @@ More detail explanation will be in Postman
 
 **Postman Collection:**
 
-[Postman Collection Link](https://www.openai.com)
+[Postman Collection Link](https://www.postman.com/martian-crescent-965487/workspace/travel-itinerary-management-system/overview)
 
    
 
