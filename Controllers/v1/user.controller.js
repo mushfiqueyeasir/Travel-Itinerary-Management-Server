@@ -52,7 +52,6 @@ exports.login = async (req, res) => {
         error: "Password is not correct",
       });
     }
-    console.log(result);
     const token = generateToken(result);
 
     res.status(200).json({

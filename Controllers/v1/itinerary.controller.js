@@ -10,7 +10,6 @@ const {
 exports.create = async (req, res) => {
   try {
     let data = req.body;
-    console.log();
     const result = await createData(data);
     res.status(200).json({
       status: "success",
@@ -115,8 +114,6 @@ exports.update = async (req, res, next) => {
 
 exports.delete = async (req, res, next) => {
   const itineraryId = req.params.itineraryId;
-  console.log(itineraryId);
-
   try {
     const result = await deleteData(itineraryId);
 
