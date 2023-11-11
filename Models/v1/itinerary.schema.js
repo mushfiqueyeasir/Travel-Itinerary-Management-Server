@@ -16,24 +16,19 @@ const itinerarySchema = mongoose.Schema(
         "At least one activity detail is required",
       ],
     },
-    itineraryImage: {
-      type: String,
-      validate: [validator.isURL, "Please Provide A Valid imgURL url!"],
-    },
     destination: {
       type: String,
       required: [true, "Destination of the trip is Required"],
     },
-    dates: {
-      start: {
-        type: Date,
-        required: [true, "Start date of the trip is Required"],
-      },
-      end: {
-        type: Date,
-        required: [true, "End date of the trip is Required"],
-      },
+    startDate: {
+      type: Date,
+      required: [true, "Start date of the trip is Required"],
     },
+    endDate: {
+      type: Date,
+      required: [true, "End date of the trip is Required"],
+    },
+
     accommodationDetails: {
       hotelName: {
         type: String,
@@ -43,9 +38,13 @@ const itinerarySchema = mongoose.Schema(
         type: String,
         description: "Booking reference for the accommodation",
       },
-      checkInOutTimes: {
-        type: String,
-        required: [true, "Check-in and check-out times is Required"],
+      checkInTime: {
+        type: Date,
+        required: [true, "Check-In Time is Required"],
+      },
+      checkOutTime: {
+        type: Date,
+        required: [true, "Check-out Time is Required"],
       },
     },
     transportationDetails: {
